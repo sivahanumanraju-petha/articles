@@ -14,7 +14,7 @@ becomes tokens like:
 Tokenization isn’t exactly the same as splitting words. GPT models use a tokenizer (based on Byte Pair Encoding - BPE) that breaks down text into subwords or character clusters to handle any language or symbol efficiently.
 
 
-Why Tokens Matter
+## Why Tokens Matter
 
 1. Cost
 OpenAI and other providers charge per token. Knowing how many tokens your input/output uses helps you control costs.
@@ -26,7 +26,7 @@ Longer prompts use more context, but going over token limits causes the model to
 Each token matters in a tightly optimized prompt. Being concise and strategic improves both speed and response quality.
 
 
-Tips for Working with Tokens
+## Tips for Working with Tokens
 
 
 ✅ Keep prompts tight
@@ -57,49 +57,49 @@ Writing efficiently in prompt design means understanding that "hello" is one tok
 
 ## Embeddings 
 
-Introduction
+### Introduction
 In Natural Language Processing (NLP), the term embedding is essential. Whether you're using GPT-4, building a chatbot, or searching large text datasets, embeddings enable models to understand, compare, and store text in a mathematical form.
 
-This article will help you understand:
+## This article will help you understand:
 
-What embeddings are
+* What embeddings are
 
-Why they’re important
+* Why they’re important
 
-How GPT and OpenAI use them
+* How GPT and OpenAI use them
 
-Real-world use cases
+* Real-world use cases
 
-What Are Embeddings?
+## What Are Embeddings?
 An embedding is a way to represent text (words, sentences, or entire documents) as a list of numbers — a vector — in a high-dimensional space.
 
-🔢 Example:
+## Example:
 
 The word “apple” might become a vector like:
 [0.12, -0.84, 0.44, ..., 0.03] (e.g., 1,536 dimensions)
 
-These vectors capture semantic meaning, so words like:
+  These vectors capture semantic meaning, so words like:
 
-“king” and “queen” will have similar embeddings
+  “king” and “queen” will have similar embeddings
 
-“cat” and “banana” will not
+  “cat” and “banana” will not
 
-Why Use Embeddings?
+## Why Use Embeddings?
 Traditional keyword-based systems can’t "understand" text beyond exact word matches. Embeddings solve this by allowing models to recognize semantic similarity — meaning and context — not just surface words.
 
-✅ Benefits:
+## Benefits:
 Find similar documents (semantic search)
 
-Cluster related content
+* Cluster related content
 
-Power recommendation engines
+* Power recommendation engines
 
-Detect anomalies or duplicates
+* Detect anomalies or duplicates
 
-Enable natural language search
+* Enable natural language search
 
 
-How Do Embeddings Work?
+## How Do Embeddings Work?
 
 Internally, embeddings are created by neural networks that:
 
@@ -107,7 +107,7 @@ Internally, embeddings are created by neural networks that:
 
  2.Project text into vector space where similar meanings are closer together
 
-# Getting Started with OpenAI Embeddings
+## Getting Started with OpenAI Embeddings
 
 ```python
 
@@ -124,18 +124,18 @@ embedding_vector = response.data[0].embedding
 ```
 
 
-### Vector-Based Search
+## Vector-Based Search
 
 
-Introduction
+### Introduction
 As the amount of digital content explodes, traditional keyword-based search is no longer enough. Users want search results based on meaning, not just exact words. This is where vector-based search comes in — a powerful, AI-driven technique that enables semantic search and understanding across vast datasets.
 
 
-What is Vector-Based Search?
+### What is Vector-Based Search?
 Vector-based search also known as semantic search  a technique where text (or other data like images) is represented as a vector — a list of numbers — in a high-dimensional space. Instead of matching exact words, it matches meanings by comparing vectors for similarity.
 
 
-Vector-Based Search:
+*Vector-Based Search*
 
  1.Matches similar meanings even with different words
 
@@ -143,7 +143,7 @@ Vector-Based Search:
 
 
 
-How It Works (Step-by-Step)
+## How It Works (Step-by-Step)
 
  1.Convert text to vector (embedding)
 Use an embedding model like text-embedding-3-small from OpenAI to transform queries and documents into vectors.
@@ -161,9 +161,9 @@ Use cosine similarity (or other distance metrics) to find vectors closest to the
 Show the user the most semantically relevant results — even if they didn’t use the same words.
 
 
-Tools & Technologies
+## Tools & Technologies
 
-    Embedding Models:
+*Embedding Models:*
  1.OpenAI – text-embedding-3-small
 
  2.Cohere
@@ -171,7 +171,7 @@ Tools & Technologies
  3.Hugging Face models (e.g., sentence-transformers)
 
 
-Vector Databases:
+## Vector Databases:
 
  1.FAISS (Facebook AI Similarity Search)
 
@@ -184,7 +184,7 @@ Vector Databases:
  5.Milvus
 
 
-Code Example (OpenAI + FAISS)
+## Code Example (OpenAI + FAISS)
 
 ```python
 
@@ -208,20 +208,20 @@ D, I = index.search(query_vector.reshape(1, -1), k=5)  # Top 5 matches
 
 ```
 
-#### FAISS
+## FAISS
 
-1.What is FAISS?
+## 1 What is FAISS?
 
 FAISS (Facebook AI Similarity Search) is an open-source library developed by Meta AI for efficient similarity search and clustering of dense vectors. It’s designed to quickly find items in large datasets that are closest in meaning or features to a given query — a core requirement for semantic search, recommendation systems, and machine learning applications.
 
 
-2.Why FAISS?
+## 2.Why FAISS?
 
 With the rise of embeddings (from models like OpenAI's text-embedding-3-small, BERT, or Sentence Transformers), we now work with vectors that represent the meaning of words, sentences, or images.
 
 But when you have millions of these vectors, how do you search quickly for the most similar one?
 
-That’s where FAISS shines:
+## 3.That’s where FAISS shines:
 ✅ Fast
 ✅ Scalable
 ✅ Customizable
@@ -239,7 +239,7 @@ That’s where FAISS shines:
 
 
 
-Basic Workflow
+## Basic Workflow
 
 
  1.Prepare your vectors
@@ -280,7 +280,7 @@ print("Top 5 similar vectors:", indices)
 
 ```
 
-FAISS Index Types 
+## FAISS Index Types 
 
 | Index Type     | Description                           | Speed        | Accuracy  |
 | -------------- | ------------------------------------- | ------------ | --------- |
@@ -318,13 +318,13 @@ FAISS Index Types
 
 
 
-#### MongoDB
+## MongoDB
 
-1.Introduction to MongoDB
+### 1.Introduction to MongoDB
 
 MongoDB is a popular, open-source NoSQL database designed for high performance, high availability, and easy scalability. Unlike traditional relational databases, MongoDB stores data in flexible, JSON-like documents, making it ideal for modern applications that require fast iteration, large data volumes, and changing data structures.
 
-2.What is MongoDB?
+### 2.What is MongoDB?
 
 MongoDB is a NoSQL database that stores data in flexible, JSON-like documents rather than traditional rows and columns. It’s designed to handle a variety of data types and use cases — from small hobby apps to enterprise-scale systems.
 
@@ -353,13 +353,13 @@ Created in 2009 by MongoDB Inc., it has become one of the most popular databases
 | Use Case Fit   | Agile, flexible applications | Structured, transactional |
 
 
-3.Core Concepts
+## Core Concepts
 
-3.1Collection
+### Collection
 
  A group of documents (like a table in SQL).
 
-3.2Document
+### Document
 
  A single data record, stored as a flexible JSON-like object.
 
@@ -389,7 +389,7 @@ Created in 2009 by MongoDB Inc., it has become one of the most popular databases
  5.Realm – Serverless backend platform integrated with MongoDB
 
 
-Use Cases
+### Use Cases
 ✅ Real-time analytics
 ✅ E-commerce platforms
 ✅ Content management systems
@@ -398,7 +398,7 @@ Use Cases
 ✅ AI/ML data pipelines
 
 
-Pros 
+## Pros 
 
 ✅ Pros
  1.Flexible schema = agile development
@@ -411,13 +411,13 @@ Pros
 
 
 
-#### Console Application
+## Console Application
 
-Introduction:
+### Introduction:
 
 A console application is a lightweight program that runs entirely in a command-line interface (CLI), such as a terminal or command prompt. Unlike graphical user interfaces (GUIs), console apps rely on text-based input and output to interact with the user.
 
- ## Console applications are widely used for:
+ ### Console applications are widely used for:
 
  1.System utilities and automation tools
 
@@ -434,8 +434,8 @@ Because they are simple, fast, and easy to build, console applications are often
 A console application is a program that runs in a text-based interface like the terminal or command prompt. Unlike GUI applications, it interacts with users through text input and output. Console apps are lightweight, fast, and ideal for scripting, automation, and learning programming fundamentals.
 
 
-✅ Why Build Console Applications?
-Console apps are great for:
+### ✅ Why Build Console Applications?
+        Console apps are great for:
 
 1. Automation scripts
 
@@ -499,7 +499,7 @@ while True:
 
 -----
 
-👨‍💻 Common Features of Console Apps
+## 👨‍💻 Common Features of Console Apps
 
 | Feature               | Description                                                |
 | --------------------- | ---------------------------------------------------------- |
