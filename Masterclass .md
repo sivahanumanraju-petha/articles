@@ -512,17 +512,17 @@ while True:
 
 
 
-🔟 Interview Questions
+## 🔟 Interview Questions
 
 
-1.What is a token in GPT-based language models, and how does tokenization affect model performance?
-2.How do embeddings differ from raw text, and why are they useful in NLP tasks?
-3.Explain how you would use GPT-4 embeddings for document search or classification.
-4.What is vector similarity search, and how is it used in AI applications like chatbots or recommendations?
-5.Compare FAISS and a traditional database for similarity search. Why use FAISS?
-6.Explain how FAISS indexes work (e.g., FlatL2 vs. HNSW vs. IVFPQ) and when to use each.
-7.How would you store and query embedding vectors in MongoDB?
-8.What are the advantages of using MongoDB over a relational database in a modern AI/ML project?
-9.What are typical use cases for console applications, and how can they be integrated into an AI pipeline?
-10.Design a simple console application that accepts a user’s question, sends it to a GPT API, and prints the answer. What components would you include?
+* 1.What is a token in GPT-based language models, and how does tokenization affect model performance?
+* 2.How do embeddings differ from raw text, and why are they useful in NLP tasks?
+* 3.Explain how you would use GPT-4 embeddings for document search or classification.
+* 4.What is vector similarity search, and how is it used in AI applications like chatbots or recommendations?
+* 5.Compare FAISS and a traditional database for similarity search. Why use FAISS?
+* 6.Explain how FAISS indexes work (e.g., FlatL2 vs. HNSW vs. IVFPQ) and when to use each.
+* 7.How would you store and query embedding vectors in MongoDB?
+* 8.What are the advantages of using MongoDB over a relational database in a modern AI/ML project?
+* 9.What are typical use cases for console applications, and how can they be integrated into an AI pipeline?
+* 10.Design a simple console application that accepts a user’s question, sends it to a GPT API, and prints the answer. What components would you include?
 
